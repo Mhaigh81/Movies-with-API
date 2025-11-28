@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Moivie</title>
+    <script src="https://kit.fontawesome.com/a2b918032a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="find-style.css">
+</head>
+<body>
+    <section id="landing">
+        <div class="nav__container">
+            <nav>
+                <figure>
+                    <img id="logo" src="./assets/Logo.png" alt="">
+                </figure>
+                <ul class="nav__link--list">
+                    <li>
+                        <a href="#" class="nav__link link__hover-effect">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav__link link__hover-effect">Find Your Movie</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav__link nav__link--primary">Contact</a>
+                    </li>
+
+                </ul>
+            </nav>    
+        </div>
+    
+        <div class="container">
+            <div class="row">
+                <h1 class="title">Find Your Movie</h1>
+                
+                <div class="search">
+                    <div class="search__wrapper">
+                            <input class="search__input" type="text" placeholder="Search by Title, Type, or Year Released">
+                            <button class="btn search__btn">
+                                <i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                                    
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </section>
+    <section id="search">
+        <div class="container2">
+            <div class="row">
+                <div class="progress-bar"></div>
+                <div class="filter-bar">
+                    <h1 class="search-info">Search results:</h1>
+                    <div class="year-released">
+                        <h2 class="release">Release Date:<span class="purple">  1900 to 2025</span></h2>
+                        <div data-v-66aecfa2="" class="slider-wrapper">
+                            <div data-v-66aecfa2="" role="slider" aria-valuemin="1900" aria-valuemax="2025" aria-orientation="horizontal" class="el-slider"                      aria-valuetext="1900-2025" aria-label="slider between 1900 and 2025">
+                                <div class="el-slider__runway">
+                                <div class="el-slider__bar" style="width: 100%; left: 0%;">
+                                </div>
+                                <div tabindex="0" class="el-slider__button-wrapper" style="left: 0%;">
+                                    <div class="el-tooltip el-slider__button" aria-describedby="el-tooltip-967" tabindex="0"></div>
+                                </div>
+                                <div tabindex="0" class="el-slider__button-wrapper" style="left: 100%;">
+                                    <div class="el-tooltip el-slider__button" aria-describedby="el-tooltip-2163" tabindex="0"></div>
+                                </div>
+                                <div>
+                                    <div class="el-slider__stop el-slider__marks-stop" style="left: 0%;"></div>
+                                    <div class="el-slider__stop el-slider__marks-stop" style="left: 100%;"></div>
+                                </div>
+                                <div class="el-slider__marks">
+                                    <div class="el-slider__marks-text" style="left: 0%;">1900</div>
+                                    <div class="el-slider__marks-text" style="left: 100%;">2025</div>
+                                </div></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

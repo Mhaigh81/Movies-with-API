@@ -1,0 +1,190 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* a:hover{
+    text-decoration: underline;
+} */
+
+button {
+  cursor: pointer;
+}
+
+
+.nav__container{
+    padding: 24px, 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+.container {
+  padding: 50px 0;
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+#logo{
+    height: 150px;
+    padding-top: 10px;
+}
+
+.purple{
+    color: #6030b1;
+}
+
+/* 
+
+  NAVIGATION 
+  
+*/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 150px;
+}
+
+.nav__link--list{
+    display: flex;
+}
+
+.nav__link{
+    margin: 0 24px;
+    font-size: 24px;
+}
+
+.nav__link--primary{
+    background-color: #6030b1;
+    padding: 10px 32px;
+    color: white;
+    border-radius: 999px;
+    text-decoration: none;
+
+}
+
+.nav__link--primary:hover{
+    background-color:#5d3eff;
+}
+
+
+.link__hover-effect{
+    position: relative;
+}
+
+.link__hover-effect:after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 0;
+    right: 0;
+    transition: all 400ms ease;
+    background-color: #6030b1;
+}
+
+.link__hover-effect:hover:after{
+    left: 0;
+    width: 100%;
+}
+
+
+/* 
+
+  LANDING 
+  
+*/
+
+.header__container{
+    margin: 96px 0;
+}
+
+.title{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.sub-title{
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.search__wrapper{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+  
+}
+
+.fa-solid{
+    color: white;
+    font-size: 32px;
+}
+
+.search__input{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    color: #0a1f44;
+    outline: none;
+    width: 100%;
+    font-size: 20px;
+    padding: 0 15px;
+}
+
+.search__btn{
+    width: 200px;
+    margin-left: 20px;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    background-color: #6030b1;
+}
+
+.search__btn:hover{
+    background-color: #ff328f;
+    box-shadow: 7px 7px 14px rgba(134, 93, 204, 0.3)
+}
+
+
+
+.main-photo{
+    width: 100%;
+    padding: 120px 10px;
+}
