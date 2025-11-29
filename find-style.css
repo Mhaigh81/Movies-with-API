@@ -229,96 +229,15 @@ nav {
     align-items: center;
 }
 
-.year-release{
-    width: 30%;
-    min-width: 335px;
-}
-
-.el-slider__runway{
-    width: 100%;
-    height: 6px;
-    background-color: rgb(228, 231, 237);
-    position: relative;
-    cursor: pointer;
-    vertical-align: middle;
-    margin: 16px 0px;
-    border-radius: 3px;
-}
-
-.price-filter[data-v-66aecfa2] {
-    width: 30%;
-    min-width: 335px;
-}
-
-.el-slider__bar{
-    height: 6px;
-    background-color: rgb(96, 48, 177);
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    position: absolute;
-}
-
-.el-slider__button-wrapper{
-    height: 36px;
-    width: 36px;
-    position: absolute;
-    z-index: 1001;
-    top: -15px;
-    transform: translateX(-50%);
-    background-color: transparent;
-    text-align: center;
-    user-select: none;
-    line-height: normal;
-}
-
-.el-slider__button {
-    width: 16px;
-    height: 16px;
-    background-color: rgb(255, 255, 255);
-    user-select: none;
-    border-width: 2px;
-    border-style: solid;
-    border-color: rgb(96, 48, 177);
-    border-image: initial;
-    border-radius: 50%;
-    transition: 0.2s;
-}
-.el-slider__button-wrapper .el-tooltip, .el-slider__button-wrapper::after {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.el-slider__button-wrapper::after {
-    content: "";
-    height: 100%;
-}
-
-.el-slider__stop{
-    display: none;
-    position: absolute;
-    height: 6px;
-    width: 6px;
-    background-color: rgb(255, 255, 255);
-    transform: translateX(-50%);
-    border-radius: 100%;
-}
-
-.el-slider__marks {
-    top: 0px;
-    left: 12px;
-    width: 18px;
-    height: 100%;
-}
-
-.el-slider__marks-text {
-    position: absolute;
-    transform: translateX(-50%);
-    font-size: 14px;
-    color: rgb(144, 147, 153);
-    margin-top: 15px;
-}
-
-.el-slider::after, .el-slider::before {
-    display: table;
-    content: "";
+select {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #dcdfe6;
+  color: #0a1f44;
+  height: 40px;
+  line-height: 40px;
+  outline: none;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 200px;
 }
