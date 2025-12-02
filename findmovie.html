@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/a2b918032a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="find-style.css">
     <script src="index.js"></script>
-    <script src="movies.js"></script>
+    <script src="movies.js" defer></script>
 </head>
 <body>
     <section id="movies__body">
@@ -37,7 +37,7 @@
                 <div class="search">
                     <div class="search__wrapper">
                             <input class="search__input" type="text" 
-                                placeholder="Search by Title, Type, or Year Released"
+                                placeholder="Search for your movie titles here:"
                                 onchange="searchChange(event)">
 
                             <button class="btn search__btn">
@@ -54,17 +54,19 @@
             <div class="row">
                 <!-- <div class="progress-bar"></div> -->
                 <div class="filter-bar">
-                    <h1 class="search-info">Search results:</h1>
-                    <select id="filter" ">
+                    <div class="search">
+                    <h1 class="search-info">Search results for </h1>
+                    <h1 class="searchName"></h1></div>
+                    <select id="filter" " onchange="sortChange(event)">
                         <option value="" disabled selected>Sort</option>
-                        <option value="NEW_TO_OLD">Newest to Oldest</option>
-                        <option value="OLD_TO_NEW">Oldest to Newest</option>
-                        <option value="Rating">Rating</option>
+                        <option value="newest">Newest to Oldest</option>
+                        <option value="oldest">Oldest to Newest</option>
+                        <!-- <option value="Rating">Rating</option> -->
                     </select>
                 </div>
-                <section class="411">
-                    <div class="movies"></div>
-                </section>
+                
+                <div class="movies"></div>
+                
             </div>
         </div>
     </section>
