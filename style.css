@@ -89,7 +89,7 @@ nav {
     color: white;
     border-radius: 999px;
     text-decoration: none;
-
+    cursor: not-allowed;
 }
 
 .nav__link--primary:hover{

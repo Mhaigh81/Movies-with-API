@@ -22,19 +22,15 @@ async function renderMovies(searchTerm){
     displayMovies(currentMovies)
 }
 
-
-//   <img class="movie__img" src=${movie.Poster} alt=""></img>
-//  <img src="${movie.Poster}" alt="Primary image" onerror="this.onerror=null; this.src='./assets/no-image.png';"></img>
-
 // DISPLAYING MOVIES
 function displayMovies(movieList) {
-    moviesWrapper.innerHTML = movieList.slice(0, 6)
+    moviesWrapper.innerHTML = movieList
+        .slice(0, 6)
         .map((movie) => {
-            console.log("movies")
         return `
         <div class="movie">
             <figure>
-                <img class="movie__img" src="${movie.Poster}" alt="Primary image" onerror="this.onerror=null; this.src='./assets/no-image.png';"></img>
+                <img class="movie__img" src=${movie.Poster} alt="">
             </figure>
             <h2 class="movie__title">${movie.Title}</h2>
             <h4 class="movie__year">${movie.Year}</h4>
@@ -42,15 +38,13 @@ function displayMovies(movieList) {
         </div>
         `
     }).join("")
-    }
-
+}
 
 // SORTING MOVIES
 function sortChange(event){
-    console.log('sort')
     const sortOption = event.target.value
 
-    let sortedMovies = [currentMovies]
+    let sortedMovies = [...currentMovies]
 
     if (sortOption === "newest"){
         sortedMovies.sort((a, b) => b.Year - a.Year)

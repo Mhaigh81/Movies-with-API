@@ -100,7 +100,7 @@ nav {
     color: #6030b1;
     border-radius: 999px;
     text-decoration: none;
-
+    cursor: not-allowed;
 }
 
 .nav__link--primary:hover{
@@ -267,7 +267,7 @@ select {
 }
 
 .movie__img{
-    max-height: 510px;
+    max-height: 446px;
     width: 100%;
     transition: all 300ms ease;
     border-radius: 4px;
