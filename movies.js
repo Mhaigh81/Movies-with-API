@@ -20,7 +20,6 @@ async function renderMovies(searchTerm){
     currentMovies = data.Search;
     
     if (!currentMovies){
-        console.log("none")
         moviesWrapper.innerHTML = "No Movies Found"
     }
     else displayMovies(currentMovies)
@@ -31,7 +30,7 @@ function displayMovies(movieList) {
     
     
     moviesWrapper.innerHTML = movieList
-        .slice(0, 6)
+        // .slice(0, 6)
         .map((movie) => {
         return `
         <div class="movie">
@@ -49,7 +48,7 @@ function displayMovies(movieList) {
 // function displayYear(movieList){
 //     const year = movie.Year
 //     const endYear = year.split("-")[1]
-//     console.log(year)
+//     console.log(endYear)
 // }
 
 // SORTING MOVIES
@@ -58,15 +57,19 @@ function sortChange(event){
     
 
     let sortedMovies = [...currentMovies]
-
    
 
+    const getYear = (movie) => {
+    const year = movie.Year;
+    const parts = year.split(/[-–]/).map(ele => Number(ele.trim()));
+    return parts.length > 1 ? parts[1] : parts[0];
+    };
+
     if (sortOption === "newest"){
-        console.log(sortedMovies)
-        sortedMovies.sort((a, b) => b.Year - a.Year)
+        sortedMovies.sort((a, b) => getYear(b) - getYear(a))
     }
     else if (sortOption === "oldest"){
-        sortedMovies.sort((a, b) => a.Year - b.Year)
+        sortedMovies.sort((a, b) => getYear(a) - getYear(b))
     }
 
     displayMovies(sortedMovies)
