@@ -15,6 +15,10 @@ function searchChange(event){
 
 // RENDER MOVIES CALLING API
 async function renderMovies(searchTerm){
+    
+    moviesWrapper.classList += ' movies__loading'
+    
+    
     const response = (await fetch(`http://www.omdbapi.com/?s=${searchTerm}&apikey=900cdde7`))
     const data = await response.json();
     currentMovies = data.Search;
@@ -23,14 +27,21 @@ async function renderMovies(searchTerm){
         moviesWrapper.innerHTML = "No Movies Found"
     }
     else displayMovies(currentMovies)
+
+    moviesWrapper.classList.remove('movies__loading')
+  
+ 
 }
+
+// setTimeout(() => {
+//     renderMovies()
+// }, 2000)
 
 // DISPLAYING MOVIES
 function displayMovies(movieList) {
-    
-    
+   
     moviesWrapper.innerHTML = movieList
-        // .slice(0, 6)
+        .slice(0, 6)
         .map((movie) => {
         return `
         <div class="movie">
@@ -43,13 +54,10 @@ function displayMovies(movieList) {
         </div>
         `
     }).join("")
-}
+    
+} 
 
-// function displayYear(movieList){
-//     const year = movie.Year
-//     const endYear = year.split("-")[1]
-//     console.log(endYear)
-// }
+
 
 // SORTING MOVIES
 function sortChange(event){
@@ -60,9 +68,12 @@ function sortChange(event){
    
 
     const getYear = (movie) => {
-    const year = movie.Year;
-    const parts = year.split(/[-–]/).map(ele => Number(ele.trim()));
-    return parts.length > 1 ? parts[1] : parts[0];
+    const parts = movie.Year.split(/[-–]/)
+        .map(p => p.trim())
+        .filter(p => p !== "")
+        .map(Number);
+
+    return parts[parts.length - 1];
     };
 
     if (sortOption === "newest"){
