@@ -10,7 +10,7 @@ let currentMovies = []
 function searchChange(event){
     renderMovies(event.target.value);
     searchName.innerHTML = event.target.value
-    // console.log(searchName)
+    console.log(searchName)
 }
 
 
@@ -19,13 +19,24 @@ async function renderMovies(searchTerm){
     const response = (await fetch(`http://www.omdbapi.com/?s=${searchTerm}&apikey=900cdde7`))
     const data = await response.json();
     currentMovies = data.Search;
+
+    moviesWrapper.classList += " movies__loading"
+
     displayMovies(currentMovies)
+
+    moviesWrapper.classList.remove("movies__loading")
 }
 
 // DISPLAYING MOVIES
 function displayMovies(movieList) {
-    moviesWrapper.innerHTML = movieList
-        .slice(0, 6)
+
+    
+    if (movieList.length === 0) {
+        moviesWrapper.innerHTML = "No Movies Found"
+        return
+       
+    }
+    else moviesWrapper.innerHTML = movieList.slice(0, 6)
         .map((movie) => {
         return `
         <div class="movie">
@@ -46,6 +57,10 @@ function sortChange(event){
 
     let sortedMovies = [...currentMovies]
 
+    const year = movie.Year
+    const endYear = year.split("-")[1]
+    return endYear
+    
     if (sortOption === "newest"){
         sortedMovies.sort((a, b) => b.Year - a.Year)
     }

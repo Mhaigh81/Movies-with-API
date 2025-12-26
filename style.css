@@ -184,3 +184,11 @@ nav {
     width: 100%;
     padding: 120px 10px;
 }
+
+.footer__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+    font-size: 18px;
+}

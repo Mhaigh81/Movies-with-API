@@ -24,6 +24,8 @@ a {
   text-decoration: none;
 }
 
+
+
 /* a:hover{
     text-decoration: underline;
 } */
@@ -266,6 +268,7 @@ select {
     padding: 24px;
 }
 
+
 .movie__img{
     max-height: 446px;
     width: 100%;
@@ -276,20 +279,25 @@ select {
 }
 
 .movie__title,
-.movie__year,
-.movie__btn {
+.movie__year {
     display: flex;
     align-items: center; 
     justify-content: center; 
     margin-top: 8px;
+    color: black;
 }
 
 .movie__title{
     text-align: center;
+    font-size: 24px;
 }
 .movie__title:hover{
     text-decoration: underline;
     cursor: not-allowed;
+}
+
+.movie__year {
+    font-size: 16px;
 }
 
 .movie:hover .movie__img{
@@ -297,6 +305,9 @@ select {
 }
 
 .movie__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #6030b1;
     padding: 10px 32px;
     color: white;
@@ -308,4 +319,49 @@ select {
 .movie__btn:hover{
     background-color:#5d3eff;
     cursor: not-allowed;
+}
+
+
+.movies__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  font-size: 60px;
+  color: #7342d6;
+  /* margin-bottom: 25vh; */
+}
+
+.movies__loading--spinner{
+  display: none;
+}
+
+.movies__loading .movies__loading--spinner{
+  display: block;
+}
+
+.fa-spinner {
+    animation: rotate 800ms infinite linear;
+    font-size: 60px;
+    color: #6030b1;
+    /* margin-bottom: 50vh; */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.footer__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    padding: 60px;
+    font-size: 18px;
 }
