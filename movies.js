@@ -33,9 +33,6 @@ async function renderMovies(searchTerm){
     moviesWrapper.classList.remove('movies__loading')
 }
 
-// setTimeout(() => { 
-//     renderMovies()
-// }, 2000)
 
 // DISPLAYING MOVIES
 function displayMovies(movieList) {

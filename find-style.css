@@ -25,11 +25,6 @@ a {
 }
 
 
-
-/* a:hover{
-    text-decoration: underline;
-} */
-
 button {
   cursor: pointer;
 }
@@ -45,15 +40,14 @@ button {
 .container {
   padding: 60px 0;
   width: 100%;
-  /* background-color: lightyellow; */
 }
+
 .container2 {
   padding: 60px 0;
   width: 100%;
   background-color: lightgray;
   height: 100%;
   min-height: calc(100vh - 550px);
-  
 }
 
 .row {
@@ -196,7 +190,6 @@ nav {
 
 .fa-solid:hover{
     color: #ff328f;
-    /* box-shadow: 7px 7px 14px rgba(134, 93, 204, 0.3) */
 }
 
 .overlay {
@@ -269,6 +262,7 @@ select {
     font-weight: bold;
     color: #6030b1;
     justify-content: center;
+    text-align: center;
     padding-top: 48px;
 }
 
@@ -300,10 +294,6 @@ select {
     text-align: center;
     font-size: 24px;
 }
-/* .movie__title:hover{
-    text-decoration: underline;
-    cursor: not-allowed;
-} */
 
 .movie__year {
     font-size: 16px;
@@ -339,7 +329,6 @@ select {
   padding-top: 60px;
   font-size: 60px;
   color: #7342d6;
-  /* margin-bottom: 25vh; */
 }
 
 .movies__loading--spinner{
@@ -354,7 +343,6 @@ select {
     animation: rotate 800ms infinite linear;
     font-size: 60px;
     color: #6030b1;
-    /* margin-bottom: 50vh; */
 }
 
 @keyframes rotate {
@@ -378,9 +366,6 @@ select {
 
 /* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
 @media (max-width: 768px) {
-  /* .header__description {
-    padding: 0 24px;
-  } */
 
   h1 {
     font-size: 24px;
