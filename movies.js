@@ -19,7 +19,7 @@ async function renderMovies(searchTerm){
     moviesWrapper.classList.add('movies__loading')
     moviesWrapper.innerHTML = `<i class="fa-solid fa-spinner books__loading--spinner"></i>`
 
-    const response = (await fetch(`http://www.omdbapi.com/?s=${searchTerm}&apikey=900cdde7`))
+    const response = (await fetch(`https://www.omdbapi.com/?s=${searchTerm}&apikey=900cdde7`))
     const data = await response.json();
     currentMovies = data.Search;
     
