@@ -3,7 +3,7 @@
 const moviesWrapper = document.querySelector(".movies");
 const searchName = document.querySelector(".searchName")
 
-// GLOBAL VARIABLE
+// // GLOBAL VARIABLE
 let currentMovies = []
 
 // HANDLING SEARCH
@@ -16,24 +16,24 @@ function searchChange(event){
 // RENDER MOVIES CALLING API
 async function renderMovies(searchTerm){
     
-    moviesWrapper.classList += ' movies__loading'
-    
-    
+    moviesWrapper.classList.add('movies__loading')
+    moviesWrapper.innerHTML = `<i class="fa-solid fa-spinner books__loading--spinner"></i>`
+
     const response = (await fetch(`http://www.omdbapi.com/?s=${searchTerm}&apikey=900cdde7`))
     const data = await response.json();
     currentMovies = data.Search;
     
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
     if (!currentMovies){
         moviesWrapper.innerHTML = "No Movies Found"
     }
     else displayMovies(currentMovies)
 
     moviesWrapper.classList.remove('movies__loading')
-  
- 
 }
 
-// setTimeout(() => {
+// setTimeout(() => { 
 //     renderMovies()
 // }, 2000)
 
@@ -62,17 +62,14 @@ function displayMovies(movieList) {
 // SORTING MOVIES
 function sortChange(event){
     const sortOption = event.target.value
-    
 
     let sortedMovies = [...currentMovies]
-   
 
     const getYear = (movie) => {
     const parts = movie.Year.split(/[-–]/)
         .map(p => p.trim())
         .filter(p => p !== "")
         .map(Number);
-
     return parts[parts.length - 1];
     };
 

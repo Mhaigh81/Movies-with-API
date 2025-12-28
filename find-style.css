@@ -51,13 +51,16 @@ button {
   padding: 60px 0;
   width: 100%;
   background-color: lightgray;
+  height: 100%;
+  min-height: calc(100vh - 550px);
+  
 }
 
 .row {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 12px;
+  padding: 0 24px;
 }
 
 #logo{
@@ -198,6 +201,7 @@ nav {
 
 .overlay {
     background-image: url(./Assets/eric-terrade-hCDI6sPTjRY-unsplash3.jpg);
+    background-size: contain;
     background-size: cover;
     /* background-position: 100%; */
     background-repeat: no-repeat;
@@ -205,8 +209,8 @@ nav {
     background-attachment:fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    /* right: 0;
+    bottom: 0; */
     overflow: hidden;
     width: 100%;
     height: 500px;
@@ -221,7 +225,7 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(41, 25, 71, .83);
+    background-color: rgba(41, 25, 71, 0.6);
 }
 
 .filter-bar{
@@ -261,6 +265,11 @@ select {
 .movies {
     display: flex;
     flex-wrap: wrap;
+    font-size: 60px;
+    font-weight: bold;
+    color: #6030b1;
+    justify-content: center;
+    padding-top: 48px;
 }
 
 .movie {
@@ -291,17 +300,17 @@ select {
     text-align: center;
     font-size: 24px;
 }
-.movie__title:hover{
+/* .movie__title:hover{
     text-decoration: underline;
     cursor: not-allowed;
-}
+} */
 
 .movie__year {
     font-size: 16px;
 }
 
 .movie:hover .movie__img{
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
 .movie__btn{
@@ -314,6 +323,7 @@ select {
     border-radius: 999px;
     text-decoration: none;
     margin: 8px auto;
+    border: none;
 }
 
 .movie__btn:hover{
@@ -364,4 +374,48 @@ select {
     background-color: lightgray;
     padding: 60px;
     font-size: 18px;
+}
+
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+@media (max-width: 768px) {
+  /* .header__description {
+    padding: 0 24px;
+  } */
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .movie {
+    width: 50%;
+  }
+
+  .nav__link--primary{
+    display: none;
+  }
+}
+
+/* SMALL PHONES, LARGE SMARTPHONES */
+@media (max-width: 550px) {
+
+  .nav__link--list{
+    flex-direction: column;
+    align-items: center;
+    line-height: 2;
+  
+  }  
+  .filter-bar{
+    flex-direction: column;
+    text-align: center;
+  }
+  .movie {
+    width: 100%;
+  }
+  .search {
+    display: block;
+  }
 }
