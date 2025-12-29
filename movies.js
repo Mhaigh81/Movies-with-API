@@ -43,7 +43,7 @@ function displayMovies(movieList) {
         return `
         <div class="movie">
             <figure>
-                <img class="movie__img" src="${movie.Poster}" alt="" onerror="this.onerror=null; this.src='./assets/no-image.png';"></img>
+                <img class="movie__img" src="${movie.Poster}" alt="" onerror="this.onerror=null; this.src='./Assets/no-image.png';"></img>
             </figure>
             <h2 class="movie__title">${movie.Title}</h2>
             <h4 class="movie__year">${movie.Year}</h4>
