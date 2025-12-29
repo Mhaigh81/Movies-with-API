@@ -185,7 +185,6 @@ nav {
     height: 100%;
     border-radius: 20px;
     border: none;
-    /* color: #6030b1; */
 }
 
 .fa-solid:hover{
@@ -193,7 +192,7 @@ nav {
 }
 
 .overlay {
-    background-image: url(/assets/eric-terrade-hCDI6sPTjRY-unsplash3.jpg);
+    background-image: url(./assets/eric-terrade-hCDI6sPTjRY-unsplash3.jpg);
     background-size: contain;
     background-size: cover;
     /* background-position: 100%; */
@@ -202,13 +201,10 @@ nav {
     background-attachment:fixed;
     top: 0;
     left: 0;
-    /* right: 0;
-    bottom: 0; */
     overflow: hidden;
     width: 100%;
     height: 500px;
     z-index: -1;
-   
 }
 
 .overlay:after{
@@ -277,8 +273,6 @@ select {
     width: 100%;
     transition: all 300ms ease;
     border-radius: 4px;
-    /* object-fit: contain;
-    object-position: left; */
 }
 
 .movie__title,
