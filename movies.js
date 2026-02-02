@@ -38,6 +38,7 @@ async function renderMovies(searchTerm){
 function displayMovies(movieList) {
    
     moviesWrapper.innerHTML = movieList
+        console.log(movieList)
         .slice(0, 6)
         .map((movie) => {
         return `
