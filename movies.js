@@ -1,5 +1,9 @@
 // GRABBING ELEMENTS FROM HTML
 
+
+
+// https://www.omdbapi.com/?i=tt1285016&apikey=900cdde7
+
 const moviesWrapper = document.querySelector(".movies");
 const searchName = document.querySelector(".searchName")
 
@@ -29,27 +33,30 @@ async function renderMovies(searchTerm){
         moviesWrapper.innerHTML = "No Movies Found"
     }
     else displayMovies(currentMovies)
-    console.log(currentMovies)
+  
 
     moviesWrapper.classList.remove('movies__loading')
 }
 
 
 // DISPLAYING MOVIES
-function displayMovies(movieList) {
+async function displayMovies(movieList) {
    
     moviesWrapper.innerHTML = movieList
-   
+
         .slice(0, 6)
         .map((movie) => {
         return `
         <div class="movie">
+           
             <figure>
                 <img class="movie__img" src="${movie.Poster}" alt="" onerror="this.onerror=null; this.src='./Assets/no-image.png';"></img>
             </figure>
             <h2 class="movie__title">${movie.Title}</h2>
             <h4 class="movie__year">${movie.Year}</h4>
-            <button class="movie__btn">Learn More</button>
+            <p>${movie.imdbID}
+            <a "https://www.omdbapi.com/?i=${movie.imdbID}&apikey=900cdde7"
+            <button class="movie__btn">Learn More</button> </a>
         </div>
         `
     }).join("")
