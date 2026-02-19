@@ -29,6 +29,7 @@ async function renderMovies(searchTerm){
         moviesWrapper.innerHTML = "No Movies Found"
     }
     else displayMovies(currentMovies)
+    console.log(currentMovies)
 
     moviesWrapper.classList.remove('movies__loading')
 }
@@ -38,7 +39,7 @@ async function renderMovies(searchTerm){
 function displayMovies(movieList) {
    
     moviesWrapper.innerHTML = movieList
-        console.log(movieList)
+   
         .slice(0, 6)
         .map((movie) => {
         return `
@@ -52,7 +53,7 @@ function displayMovies(movieList) {
         </div>
         `
     }).join("")
-    
+    console.log(movieList)
 } 
 
 
